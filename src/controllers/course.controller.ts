@@ -16,6 +16,10 @@ class CourseController {
     const course = await courseService.updateCourse(req);
     return res.status(200).json(course);
   };
+  subscripe = async (req: Request, res: Response) => {
+    const message = await courseService.subscripeCourse(req);
+    return res.status(200).json(message);
+  };
 }
 
 export default new CourseController();
